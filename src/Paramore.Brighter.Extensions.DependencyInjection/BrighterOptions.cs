@@ -1,4 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
+using Polly.Registry;
 
 namespace Paramore.Brighter.Extensions.DependencyInjection
 {
@@ -10,14 +11,14 @@ namespace Paramore.Brighter.Extensions.DependencyInjection
         public IAmARequestContextFactory RequestContextFactory { get; set; } = new InMemoryRequestContextFactory();
 
         /// <summary>
-        ///     Configures the policy registry. Set to null to use Brighter's default policy.
+        ///     Configures the polly policy registry.
         /// </summary>
-        public IAmAPolicyRegistry PolicyRegistry { get; set; }
+        public IPolicyRegistry<string> PolicyRegistry { get; set; } = new DefaultPolicy();
 
         /// <summary>
-        ///     Configures task queues. Set to null to not use task queues.
+        ///     Configures task queues. 
         /// </summary>
-        public MessagingConfiguration MessagingConfiguration { get; set; }
+        public MessagingConfiguration MessagingConfiguration { get; set; } = 
 
         /// <summary>
         ///     Configures how the services are injected. Defaults to Transient.

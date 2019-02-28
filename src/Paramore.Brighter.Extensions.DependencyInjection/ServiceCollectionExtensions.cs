@@ -33,6 +33,8 @@ namespace Paramore.Brighter.Extensions.DependencyInjection
             var handlerFactory = new ServiceProviderHandlerFactory(provider);
             var handlerConfiguration = new HandlerConfiguration(subscriberRegistry, handlerFactory, handlerFactory);
 
+            var messageMapperRegistry = 
+
             var policyBuilder = CommandProcessorBuilder.With()
                 .Handlers(handlerConfiguration);
 
@@ -42,7 +44,7 @@ namespace Paramore.Brighter.Extensions.DependencyInjection
 
             var builder = options.MessagingConfiguration == null
                 ? messagingBuilder.NoTaskQueues()
-                : messagingBuilder.TaskQueues(options.MessagingConfiguration);
+                : messagingBuilder.TaskQueues(new MessagingConfiguration(messageStore, producer, messageMapperRegistry));
 
             var commandProcessor = builder
                 .RequestContextFactory(options.RequestContextFactory)

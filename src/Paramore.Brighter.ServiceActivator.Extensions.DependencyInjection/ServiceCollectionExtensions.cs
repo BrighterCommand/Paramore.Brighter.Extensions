@@ -28,7 +28,6 @@ namespace Paramore.Brighter.ServiceActivator.Extensions.DependencyInjection
             var mapperRegistry = new ServiceCollectionMessageMapperRegistry(services, options.MapperLifetime);
             services.AddSingleton<ServiceCollectionMessageMapperRegistry>(mapperRegistry);
             
-
             services.AddSingleton<IDispatcher>(BuildDispatcher);
 
             return new ServiceCollectionServiceActivatorBuilder(services, subscriberRegistry, mapperRegistry);
