@@ -45,7 +45,7 @@ namespace GreetingsSender
             };
             var producer = new RmqMessageProducer(gatewayConnection);
 
-            serviceCollection.AddBrighter(options => options.MessagingConfiguration = new MessagingConfiguration(messageStore, producer, messageMapperRegistry)).HandlersFromAssemblies(typeof(GreetingEvent).Assembly);
+            serviceCollection.AddBrighter(options => options.BrighterMessaging = new BrighterMessaging(messageStore, producer)).HandlersFromAssemblies(typeof(GreetingEvent).Assembly);
 
             var serviceProvider = serviceCollection.BuildServiceProvider();
 
@@ -58,4 +58,6 @@ namespace GreetingsSender
            
         }
     }
+
+
 }
