@@ -7,7 +7,7 @@
 
     <ItemGroup>
       <PackageReference Include="Paramore.Brighter" Version="8.0.71" />
-      <PackageReference Include="Paramore.Brighter.MessagingGateway.RMQ" Version="8.0.71" />
+      <PackageReference Include="Paramore.Brighter.MessagingGateway.RMQ" Version="8.0.305" />
       <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
     </ItemGroup>
 
