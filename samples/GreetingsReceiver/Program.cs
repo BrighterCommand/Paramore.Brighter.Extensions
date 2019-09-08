@@ -53,7 +53,7 @@ namespace HostedServiceTest
                     {
                         options.Connections = connections;
                         options.ChannelFactory = new ChannelFactory(rmqMessageConsumerFactory);
-                        options.BrighterMessaging = new BrighterMessaging(new InMemoryMessageStore(),
+                        options.BrighterMessaging = new BrighterMessaging(new InMemoryOutbox(),
                             new RmqMessageProducer(rmqConnection));
                     }).AutoFromAssemblies();
 

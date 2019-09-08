@@ -32,7 +32,7 @@ namespace Tests
             
             serviceCollection
                 .AddBrighter(options => 
-                    options.BrighterMessaging = new BrighterMessaging(new InMemoryMessageStore(), new FakeProducer()))
+                    options.BrighterMessaging = new BrighterMessaging(new InMemoryOutbox(), new FakeProducer()))
                 .AutoFromAssemblies();
 
             var serviceProvider = serviceCollection.BuildServiceProvider();

@@ -74,10 +74,10 @@ namespace Paramore.Brighter.Extensions.DependencyInjection
 
     public class BrighterMessaging
     {
-        public IAmAMessageStore<Message> MessageStore { get; }
+        public IAmAnOutbox<Message> MessageStore { get; }
         public IAmAMessageProducer Producer { get; }
 
-        public BrighterMessaging(IAmAMessageStore<Message> messageStore, IAmAMessageProducer producer)
+        public BrighterMessaging(IAmAnOutbox<Message> messageStore, IAmAMessageProducer producer)
         {
             MessageStore = messageStore;
             Producer = producer;

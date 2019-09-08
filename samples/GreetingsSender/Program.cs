@@ -47,7 +47,7 @@ namespace GreetingsSender
 
             var serviceCollection = new ServiceCollection();
 
-            var messageStore = new InMemoryMessageStore();
+            var messageStore = new InMemoryOutbox();
             var gatewayConnection = new RmqMessagingGatewayConnection
             {
                 AmpqUri = new AmqpUriSpecification(new Uri("amqp://guest:guest@localhost:5672")),
