@@ -18,7 +18,7 @@
     <PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.2.0" />
-    <PackageReference Include="Paramore.Brighter" Version="8.0.71" />
+    <PackageReference Include="Paramore.Brighter" Version="8.1.1036" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.2.0" />
     <PackageReference Include="Paramore.Brighter.MessagingGateway.RMQ" Version="8.0.71" />
     <PackageReference Include="Paramore.Brighter.ServiceActivator" Version="8.0.71" />
