@@ -1,3 +1,8 @@
+This Repo has now been merged into the main Brighter Repo [Brighter](https://github.com/BrighterCommand/Paramore.Brighter)
+Work will continue there and please raise issues there too.
+Thanks!
+
+
 # .NET Core Extensions for [Brighter](https://github.com/BrighterCommand/Paramore.Brighter).
 
  - Dependency Injection integration for Brighter
